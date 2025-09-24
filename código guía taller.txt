@@ -1,0 +1,26 @@
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#cargamos el achivo como un dataframe
+df = pd.read_excel("nombre.xlsx")
+
+#ingresamos area y la longitud inicial de la probeta
+area =
+long_ini= 
+
+#calculamos el esfuerzo y la deformación 
+esfuerzo=df['carga']/area
+deformacion = df['elongacion']/long_ini
+
+#graficamos el esfuerzo y la deformación 
+
+fig, ax = plt.subplots()
+
+ax.plot(deformacion,esfuerzo)
+ax.set_xlabel("Esfuerzo (unidades)")
+ax.set_ylabel("Deformación Unitaria")
+plt.grid()
+
+#guardamos el gráfico 
+plt.savefig("Filename.jpg",dpi=1200)
